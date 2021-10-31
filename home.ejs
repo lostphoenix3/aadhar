@@ -1,0 +1,30 @@
+<%- include('./partials/header.ejs') %>
+
+<div class="container">
+    <form>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Aadhar no:</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Aadhar no." maxlength="12" required>
+        </div>
+        <div style="margin-bottom:30px;">
+            <div class="col-sm-5">
+                <img src="data:image/png;base64,<%= rest.captchaBase64String %>">
+                <br/> <a id="captcha_reload" href="/">reload</a>
+            </div>
+            <div class="col-sm-6">
+                <label for="captcha">Enter the code from the image here:</label>
+                <input type="text" class="form-control" required id="captcha" name="captcha" placeholder="Enter recaptcha">
+            </div>
+                <div class="col-sm-6">
+                    <label for="otp">Enter the OTP:</label>
+                    <input type="text" class="form-control" required id="otp" name="otp" placeholder="Enter OTP">
+                </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+    
+
+
+
+<%- include('./partials/footer.ejs') %> 
